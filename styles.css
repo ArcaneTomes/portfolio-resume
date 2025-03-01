@@ -1,0 +1,174 @@
+/* FULL PAGE */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body, html, main {
+  font-family: 'Source Code Pro', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+  height: 100%;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+#header {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 8px 0;
+  z-index: 9;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 16px;
+}
+.navbar a:hover {
+  background: #bcb8b1;
+  color: black;
+}
+
+/* PARALLAX */
+.parallax {
+  perspective: 500px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  scroll-behavior: smooth;
+}
+.parallax_group {
+  position: relative;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+}
+
+/* MAIN */
+
+/* SLIDE 0 */
+#slide0 .title {
+  z-index: 5;
+}
+#slide0 .parallax__layer--base {
+  z-index: 4;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+#slide0 .parallax__layer--back {
+  background-image: url("blackgreenblue.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  z-index: 3;
+}
+
+/* SLIDE 1 */
+#slide1 {
+  z-index: 5;
+}
+#slide1 .parallax__layer--base {
+  z-index: 4;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#slide1 .parallax_layer--back {
+  background: black;
+  z-index: 1;
+}
+.slide-header {
+  display: flex;
+  font-size: 50px;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+/* SLIDE 2 */
+.project {
+  border: 1px solid white;
+  width: 80%;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* SLIDE 3 */
+
+/* CONTACT FORM */
+label {
+  font-size: 14px;
+  color: gray;
+  display: block;
+  margin-top: 10px;
+}
+
+
+/*
+.form-container input, textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-container input:focus, textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.8;
+}
+
+.form-container .btn:hover {
+  background: gray;
+}
+
+.form-container .cancel {
+  background: #bcb8b1;
+  color: white;
+}

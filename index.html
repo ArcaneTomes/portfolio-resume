@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="A portfolio resume">
+    <meta name="author" content="Annelise Leonard">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/path/to/parallax.js"></script>
+    <title>Portfolio Resume</title>
+</head>
+<!------------------VISIBLE CODE---------------->
+<body>
+<!---------------------HEADER------------------->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        </div>
+    </header>
+<!---------------------MAIN--------------------->
+<main>
+<div class="parallax">
+<!---------------------SLIDES------------------->
+<!---------------------TITLE SLIDE------------------>
+    <div id="slide0" class="parallax_group">
+        <div class="parallax__layer parallax__layer--back"></div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title"><h1>Hello and welcome!</h1></div>
+        <div>
+            <p>My name is Annelise Leonard and I am a full stack developer. I am passionate about creating and designing websites and applications.</p>
+            <p>I am proficient in HTML, CSS, JavaScript, Python, and React. I am also familiar with databases, machine learning, and AI.</p>
+            <p>My goal is to create user-friendly and visually appealing websites and applications that are accessible to all users.</p>
+            <p>Feel free to explore my portfolio and contact me with any questions or opportunities.</p>
+        </div>
+        </div>
+    </div>
+
+<!---------------------ABOUT ME (SLIDE 1)------------------>
+    <div id="slide1" class="parallax_group">
+        <div class="parallax__layer parallax__layer--back"></div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title"><h2>About Me</h2></div>
+        </div>
+            <p>About me goes here.</p>
+    </div>
+<!---------------------SKILLS (SLIDE 2)------------------>
+    <div id="slide2" class="parallax_group">
+        <div class="parallax__layer parallax__layer--back"></div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title"><h2>Skills</h2></div>
+        </div>
+            <p>Skills go here.</p>
+        </div>
+    </div>
+<!---------------------PORTFOLIO (SLIDE 3)------------------>
+    <div id="slide3" class="parallax_group">
+        <div class="parallax__layer parallax__layer--back"></div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title"><h2>Portfolio</h2></div>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="column"><div class="project">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+                </div>
+            </div>
+            <div class="column"><div class="project">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+                </div>
+            </div>
+            <div class="column"><div class="project">
+                <h3>Project 3</h3>
+                <p>Description of project 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+</main>
+<!---------------------CONTACT FORM (SLIDE 3)------------------>
+<footer class="flex-container" id="footer"></footer>    
+    <section id="contact" class="slide">
+    <div class="flex-container" id="contact">
+        <div class="contact-form">
+            <form action="mailto:annelise.leonard2@gmail.com" method="post">
+                <h2>Contact Me</h2>
+            <section class="flex-container" cols="2">
+                <label for="first">First name</label>
+                    <input type="text" name="firstname" id="first" placeholder="Your name..." required>
+                <label for="last">Last name</label>
+                    <input type="text" name="lastname" id="last" placeholder="Your last name..." required>                            
+            </section>
+            <section class="flex-container">
+                <label for="email">Email address</label>
+                    <input type="text" name="emailadd" id="email" pattern=".+@example\.com" placeholder="Your email..." required>
+            </section>
+            <section class="flex-container">
+                <label for="phone">Phone number</label>
+                    <input type="tel" name="phonenum" id="phone" min="10" max="10" pattern="[0-9]{10}">
+            </section>
+            <section class="flex-container">
+                <label for="message">Message</label>
+                <textarea id="message" name="messagebox" placeholder="Write something.." style="height:200px" required></textarea>
+            </section>
+            <section>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn-cancel">Close</button>
+            </section>
+            </form>
+        </div>
+    </div>
+    </section>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
+
+
+<!--- 
+<i class="fa-brands fa-github"></i> 
+<i class="fa-brands fa-linkedin"></i>
+
+<i class="fa-brands fa-python"></i>
+<i class="fa-brands fa-square-js"></i>
+<i class="fa-brands fa-html5"></i>
+<i class="fa-brands fa-css"></i>
+<i class="fa-regular fa-database"></i>
+<i class="fa-regular fa-code-branch"></i>
+
+<i class="fa-brands fa-react"></i>
+
+<i class="fa-regular fa-file"></i>
+<i class="fa-regular fa-envelope"></i>
+
+<i class="fa-regular fa-microchip-ai"></i>
+<i class="fa-regular fa-head-side-gear"></i>
+
+--->
