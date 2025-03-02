@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio Resume</title>
 </head>
@@ -43,108 +44,110 @@
         </div>
         </div>
     </div>
-<!---------------------ABOUT ME (SLIDE 1)------------------>
+<!---------------------SKILLS (SLIDE 1)------------------>
     <div id="slide1" class="parallax_group">
         <div class="parallax__layer parallax__layer--back"></div>
-        <div class="parallax__layer parallax__layer--base">
-            <div class="title"><h2>About Me</h2></div>
-        </div class="text_container">
-            <p>About me goes here.</p>
+        <div class="parallax__layer parallax__layer--text">
+        <div class="container">
+            <div class="title"><h2>Skills</h2>
+            <p>Skills go here.</p>
+            <div class="skills">
+                <i class="devicon-bash-plain"></i>
+                <i class="devicon-html5-plain"></i>
+                <i class="devicon-css3-plain"></i>
+                <i class="devicon-javascript-plain"></i>
+                <i class="devicon-python-plain"></i>
+                <i class="devicon-react-original"></i>
+                <i class="devicon-nodejs-plain"></i>
+                <i class="devicon-swift-plain"></i>
+                <i class="devicon-postgresql-plain"></i>
+                <i class="devicon-git-plain"></i>
+                <i class="devicon-github-original"></i>
+                <i class="devicon-visualstudio-plain"></i>
+            </div>
+        </div>
         </div>
     </div>
-<!---------------------SKILLS (SLIDE 2)------------------>
+<!---------------------PORTFOLIO (SLIDE 2)------------------>
     <div id="slide2" class="parallax_group">
         <div class="parallax__layer parallax__layer--back"></div>
-        <div class="parallax__layer parallax__layer--base">
-            <div class="title"><h2>Skills</h2></div>
-        <div class="text_container">
-            <p>Skills go here.</p>
-        </div>
-        </div>
+        <div class="parallax__layer parallax__layer--text">
+            <div class="container">
+                <div class="title"><h2>Portfolio</h2></div>
+                <div class="column"><div class="project" id="project1">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                </div></div>
+                <div class="column"><div class="project" id="project2">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                </div></div>
+                <div class="column"><div class="project" id="project3">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3.</p>
+                </div></div>
+            </div>
+        </div>   
     </div>
-<!---------------------PORTFOLIO (SLIDE 3)------------------>
+<!---------------------RESUME (SLIDE 3)------------------> 
     <div id="slide3" class="parallax_group">
         <div class="parallax__layer parallax__layer--back"></div>
         <div class="parallax__layer parallax__layer--base">
-            <div class="title"><h2>Portfolio</h2></div>
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="column"><div class="project">
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-                </div>
-            </div>
-            <div class="column"><div class="project">
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-                </div>
-            </div>
-            <div class="column"><div class="project">
-                <h3>Project 3</h3>
-                <p>Description of project 3.</p>
+            <div class="container">
+                <div class="title"><h2>Resume</h2></div>
+                <div class="resume">
+                    <h3>Education</h3>
+                    <p>Education goes here.</p>
+                    <h3>Experience</h3>
+                    <p>Experience goes here.</p>
+                    <h3>Projects</h3>
+                    <p>Projects go here.</p>
                 </div>
             </div>
         </div>
     </div>
-    </section>
-</div>
-</main>
-<!---------------------CONTACT FORM (SLIDE 3)------------------>
-<footer class="flex-container" id="footer"></footer>    
-    <section id="contact" class="slide">
+<!---------------------CONTACT FORM (SLIDE 4)------------>
+<div id="contact" class="slide">
     <div class="flex-container" id="contact">
         <div class="contact-form">
             <form action="mailto:annelise.leonard2@gmail.com" method="post">
                 <h2>Contact Me</h2>
-            <section class="flex-container" cols="2">
+            <div class="flex-container" cols="2">
                 <label for="first">First name</label>
                     <input type="text" name="firstname" id="first" placeholder="Your name..." required>
                 <label for="last">Last name</label>
                     <input type="text" name="lastname" id="last" placeholder="Your last name..." required>                            
-            </section>
-            <section class="flex-container">
+            </div>
+            <div class="flex-container">
                 <label for="email">Email address</label>
                     <input type="text" name="emailadd" id="email" pattern=".+@example\.com" placeholder="Your email..." required>
-            </section>
-            <section class="flex-container">
+            </div>
+            <div class="flex-container">
                 <label for="phone">Phone number</label>
                     <input type="tel" name="phonenum" id="phone" min="10" max="10" pattern="[0-9]{10}">
-            </section>
-            <section class="flex-container">
+            </div>
+            <div class="flex-container">
                 <label for="message">Message</label>
                 <textarea id="message" name="messagebox" placeholder="Write something.." style="height:200px" required></textarea>
-            </section>
-            <section>
+            </div>
+            <div>
                 <button type="submit" class="btn">Submit</button>
                 <button type="button" class="btn-cancel">Close</button>
-            </section>
+            </div>
             </form>
         </div>
     </div>
-    </section>
+</div>
+<!---------------------FOOTER------------------->
+<footer class="flex-container" id="footer"></footer>    
+    <div class="footer">
+        <div class="footer__social">
+            <i class="devicon-linkedin-plain-wordmark"></i>
+            <i class="devicon-github-original-wordmark"></i>
+        </div>
+    </div>
 </footer>
+<!---------------------SCRIPTS------------------->
 <script src="main.js"></script>
 </body>
 </html>
-
-
-<!--- 
-<i class="fa-brands fa-github"></i> 
-<i class="fa-brands fa-linkedin"></i>
-
-<i class="fa-brands fa-python"></i>
-<i class="fa-brands fa-square-js"></i>
-<i class="fa-brands fa-html5"></i>
-<i class="fa-brands fa-css"></i>
-<i class="fa-regular fa-database"></i>
-<i class="fa-regular fa-code-branch"></i>
-
-<i class="fa-brands fa-react"></i>
-
-<i class="fa-regular fa-file"></i>
-<i class="fa-regular fa-envelope"></i>
-
-<i class="fa-regular fa-microchip-ai"></i>
-<i class="fa-regular fa-head-side-gear"></i>
-
---->
