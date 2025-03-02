@@ -17,6 +17,7 @@ body, html, main {
   text-align: center;
   height: 100%;
   background-color: black;
+  color: white;
   scroll-behavior: smooth;
   transform: translateZ(0);
 }
@@ -27,7 +28,7 @@ body, html, main {
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 8px 0;
+  padding: 5px 0;
   z-index: 9;
 }
 
@@ -40,22 +41,23 @@ body, html, main {
 .navbar a {
   color: white;
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 10px 18px;
   font-size: 16px;
 }
 .navbar a:hover {
-  background: #bcb8b1;
+  background: white;
   color: black;
+  border-radius: 5px;
 }
 
 /* PARALLAX */
 .parallax {
-  perspective: 500px;
+  perspective: 1px;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
+  -webkit-perspective: 1px;
+  perspective: 1px;
   scroll-behavior: smooth;
 }
 .parallax_group {
@@ -71,56 +73,77 @@ body, html, main {
   bottom: 0;
   left: 0;
 }
-.parallax__layer--base {
+.parallax__layer--text {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 .parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2);
 }
 
 /* MAIN */
+.container {
+  display: grid;
+  height: 450px;
+  grid-template: 1fr 2fr;
+  gap: 10px;
+  place-items: center;
+  place-content: center;
+  padding: 8px;
+  margin: 50px;
+}
 
 /* SLIDE 0 */
-#slide0 .title {
-  z-index: 5;
+#slide0 .container {
+  display: grid;
+  margin-top: 100px;
 }
-#slide0 .parallax__layer--base {
-  z-index: 4;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
+img[src="profile_.png"] {
+  display: grid;
+  height: 370px;
+  grid-column: 1;
+}
+#slide0 .title {
+  display: grid;
+  grid-column: 2;
+}
+#slide0 .title h1 {
+  font-size: 100px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+#slide0 .title p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 #slide0 .parallax__layer--back {
   background-image: url("blackgreenblue.png");
-  background-attachment: fixed;
+  background-attachment: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
-  opacity: .8;
+  height: 600px;
+  opacity: .75;
   z-index: 3;
 }
 
 /* SLIDE 1 */
 #slide1 {
+  display: grid;
   z-index: 5;
 }
 #slide1 .parallax__layer--base {
   z-index: 4;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 #slide1 .parallax_layer--back {
-  background: black;
-  z-index: 1;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  z-index: 6;
 }
 .slide-header {
   display: flex;
