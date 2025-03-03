@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html, main {
+    font-family: 'Source Code Pro', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+    height: 100%;
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+    transform: translateZ(0);
+}
+
+/* ---- HEADER ---- */
+header {
+    background: transparent;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 5px 0;
+    z-index: 10;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 16px;
+}
+.navbar a:hover {
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+.navbar a:active {
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+/* ---- PARALLAX ---- */
+.parallax {
+    perspective: 1px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+    -webkit-perspective: 1px;
+}
+.parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform .5s;
+}
+.parallax_layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax_layer_background {
+    transform: translateZ(-1px) scale(2);
+    -webkit-transform: translateZ(-1px) scale(2);
+    z-index: 0;
+}
+.parallax_layer_content {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    z-index: 2;
+}
+
+/* ---- CONTAINERs ---- */
+.container {
+    display: grid;
+    height: 450px;
+    gap: 10px;
+    place-items: center;
+    place-content: center;
+}
+
+/* ---- PROFILE ---- */
+#profile_section .container {
+    display: grid;
+    grid-template: 1fr 2fr;
+    padding-top: 20px;
+    margin: 50px;
+}
+#profile_section .parallax_layer_background{
+    background-image: url("blackgreenblue.png");
+    background-attachment: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    opacity: .8;
+    z-index: 0;
+}
+img[src="profile_.png"] {
+    display: grid;
+    height: 370px;
+    grid-column: 1;
+}
+#profile_section .title {
+    display: grid;
+    grid-column: 2;
+    border-radius: 10px;
+    padding: 10px;
+}
+#profile_section .title h1 {
+    font-size: 100px;
+    place-self: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+#profile_section p {
+    display: grid;
+    grid-column: 2;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+/* ---- SKILLS ---- */
+#skills_section .container {
+    display: grid;
+}
+#skills_section .parallax_layer_background{
+    background-image: url("black.png");
+    background-attachment: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    z-index: 1;
+}

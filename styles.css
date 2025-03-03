@@ -104,7 +104,7 @@ body, html, main {
   place-content: center;
 }
 
-/* SLIDE 0 */
+/* TITLE : SLIDE 0 */
 #slide0 .container {
   display: grid;
   grid-template: 1fr 2fr;
@@ -140,20 +140,14 @@ img[src="profile_.png"] {
   z-index: 0;
 }
 
-/* SLIDE 1 */
-#slide1 {
-  display: grid;
-  z-index: 5;
-  border: white 1px solid;
-}
-#slide1 .parallax__layer--text {
-  z-index: 4;
-  color: white;
-  border: white 1px solid;
-}
+/* SKILLS : SLIDE 1 */
 #slide1 .container {
   display: grid;
+  grid-template: 3(1fr);
   border: white 1px solid;
+}
+#slide1 .title {
+  display: grid;
 }
 #slide1 .title h2 {
   font-size: 50px;
@@ -161,8 +155,14 @@ img[src="profile_.png"] {
   text-transform: uppercase;
   border: white 1px solid;
 }
+#slide1 .title p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
 
 #slide1 .parallax_layer--back {
+  display: grid;
+  background-image: black;
   background-color: black;
   background-size: cover;
   background-position: center;
@@ -172,12 +172,24 @@ img[src="profile_.png"] {
   border: white 1px solid;
 }
 
-/* SLIDE 2 */
-#slide2 .container{
+/* PORTFOLIO : SLIDE 2 */
+#slide2 .container {
   display: grid;
   grid-template-columns: 3(1fr);
   padding-top: 20px;
   margin: 50px;
+}
+#slide2 .title {
+  display: grid;
+}
+#slide2 .title h2 {
+  font-size: 50px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+#slide2 .title p {
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 .portfolio {
   display: grid;
@@ -206,9 +218,19 @@ img[src="profile_.png"] {
   display: grid;
   grid-column: 2;
 }
-#project3 {
+.column #project3 {
   display: grid;
   grid-column: 3;
+}
+#slide2 .parallax__layer--back {
+  background-image: url("blackgreenblue_flipped.png");
+  background-attachment: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  opacity: .75;
+  z-index: 0;
 }
 
 /* SLIDE 3 */

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles_.css">
+    <title>Portfolio Resume</title>
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <a href="#welcome">Welcome</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <div class="parallax">
+    <!----------------------- Profile ----------------------->
+        <div id="profile_section" class="parallax_group">
+            <div class="parallax_layer parallax_layer_background"></div>
+            <div class="parallax_layer parallax_layer_content">
+                <div class="container">
+                    <div><img src="profile_.png"></div>
+                    <div class="title"><h1>WELCOME</h1>
+                    <div>
+                        <p>I'm Annelise.</p>
+                        <p>I excel at solving problems and innovation.</p>
+                        <p>I am passionate about lifelong learning.</p>
+                    </div>
+        </div></div></div></div>
+        <!--------------------- Skills ---------------------->
+        <div id="skills_section" class="parallax_group">
+            <div class="parallax_layer parallax_layer_background"></div>
+            <div class="parallax_layer parallax_layer_content">
+                <div class="container">
+                    <div class="title"><h2>SKILLS</h2></div>
+                    <div class="description"><p>Description Here</p></div>
+                        <div class="parallax_layer parallax_layer_foreground">
+                            <p>HTML<i class="devicon-html5-plain"></i></p>
+                            <p>CSS<i class="devicon-css3-plain"></i></p>
+                            <p>JavaScript<i class="devicon-javascript-plain"></i></p>
+                            <p>SQL</p>
+                            <p>PostgreSQL<i class="devicon-postgresql-plain"></i></p>
+                            <p>Python<i class="devicon-python-plain"></i></p>
+                            <p>React<i class="devicon-react-original"></i></p>
+                            <p>Redux</p>                                
+                            <p>Express.js</p>
+                            <p>Node.js<i class="devicon-nodejs-plain"></i></p>
+                            <p>Swift<i class="devicon-swift-plain"></i></p>
+                            <p>Git<i class="devicon-git-plain"></i></p>
+                            <p>GitHub<i class="devicon-github-original"></i></p>
+                            <p>Command Line Interface</p>
+                            <p>Windows</p>
+                            <p>macOS</p>                                    
+                            <p>Microsoft Office</p>
+                            <p>Google Workspace</p>
+                            <p>Adobe Creative Suite</p>
+                            <p>Canva</p>
+                            <p>Procreate</p>
+                            <p>SEO</p>
+                            <p>Trello</p>
+                            <p>Visual Studio Code<i class="devicon-visualstudio-plain"></i></p>
+        </div></div></div></div>
+        <!-------------------- Portfolio -------------------->
+        <div id="portfolio">
+            <div class="parallax_group">
+                <div class="parallax__layer">
+                    <div class="parallax_background"><img src="blackgreenblue_flipped.png"></div>
+                    <div class="parallax_content">
+                        <div class="container" id="portfolio">
+                            <div class="title"><h2>PORTFOLIO</h2></div>
+                            <!----HOW TO SHOW PORTFOLIO?---->
+                            <div class="column" id="project1"><h3>Project 1</h3></div>
+                                <div a href="#project1"><img src="project1.png"></div>
+                                <div class="description"><p>Description Here</p></div>
+                            <div class="column" id="project2"><h3>Project 2</h3></div>
+                                <div a href="#project2"><img src="project2.png"></div>
+                                <div class="description"><p>Description Here</p></div>
+                            <div class="column" id="project3"><h3>Project 3</h3></div>
+                                <div a href="#project3"><img src="project3.png"></div>
+                                <div class="description"><p>Description Here</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------- Resume ---------------------->
+        <div id="resume_section">
+            <div class="parallax_group">
+                <div class="parallax__layer">
+                    <div class="parallax_background"><img src="black.png"></div>
+                    <div class="parallax_content">
+                        <div class="container" id="resume">
+                            <div class="title"><h2>RESUME</h2></div>
+                            <a href="resume.pdf" download="resume.pdf">Download Resume</a>
+                            <div class="resume">
+                                <div class="column" id="experience"><h3>Experience</h3></div>
+                                    <div class="description"><p>Description Here</p></div>
+                                <div class="column" id="education"><h3>Education</h3></div>
+                                    <div class="description"><p>Description Here</p></div>
+                                <div class="column" id="certifications"><h3>Certifications</h3></div>
+                                    <div class="description"><p>Description Here</p></div>
+                                <div class="column" id="volunteer"><h3>Volunteer</h3></div>
+                                    <div class="description"><p>Description Here</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------- Contact --------------------->
+        <div id="contact_form">
+            <div class="parallax_group">
+                <div class="parallax__layer">
+                    <div class="parallax_background"><img src="black.png"></div>
+                    <div class="parallax_content">
+                        <div class="container" id="contact">
+                            <div class="title"><h2>CONTACT</h2></div>
+                            <form action="mailto:annelise.leonard2@gmail.com" method="post">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" required></textarea>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/anneliseleonard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#github"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div>&copy; 2020 Annelise</div>
+    </div>
+</footer>
+
+</body>
