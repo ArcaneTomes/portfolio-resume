@@ -16,7 +16,7 @@ body, html, main {
 
 /* ---- HEADER ---- */
 header {
-    background: transparent;
+    background: black;
     position: sticky;
     top: 0;
     width: 100%;
@@ -88,14 +88,10 @@ header {
     -webkit-tranform: translateZ(1px) scale(.7);
     z-index: 3;
 }
-
-/* ---- CONTAINERs ---- */
-.container {
-    display: grid;
-    height: 450px;
-    gap: 10px;
-    place-items: center;
-    place-content: center;
+.parallax_layer_top {
+    transform: translateZ(2px) scale(1.5);
+    -webkit-tranform: translateZ(2px) scale(1.5);
+    z-index: 4;
 }
 
 /* ---- PROFILE ---- */
@@ -104,15 +100,17 @@ header {
     grid-template: 1fr 2fr;
     padding-top: 20px;
     margin: 50px;
+    height: 450px;
+    gap: 10px;
+    place-items: center;
+    place-content: center;
 }
-#profile_section .parallax_layer_deep{
+#profile_section .parallax_layer_deep {
     background-image: url("blackgreenblue.png");
     background-attachment: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .8;
-    z-index: 0;
 }
 img[src="profile_.png"] {
     display: grid;
@@ -134,21 +132,67 @@ img[src="profile_.png"] {
 #profile_section p {
     display: grid;
     grid-column: 2;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
 /* ---- SKILLS ---- */
-#skills_section .container {
-    display: grid;
-    grid-template: 1fr 2fr;
-    padding-top: 20px;
-    margin: 50px;
-}
 #skills_section .parallax_layer_content {
     background-color: black;
+    background-size: contain;
+    background-position: relative;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    width: 100%;
     color: white;
+    place-self: center;
+    font-size: 30px;
+}
+#skills_section .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#skills_section .description {
+    margin-top: 10px;
+    padding: 25px; 
+    margin-left: 160px;
+    margin-right: 160px;
+    place-self: center;
+    overflow-wrap: break-word;
+    font-size: 20px;
+}
+#skills_section .symbols {
     display: grid;
-    grid-template-columns: 6(1fr);
-    grid-template-rows: 6(1fr);
+    padding: 30px;
+    margin-top: 10px;
+    margin-left: 250px;
+    margin-right: 250px;
+    place-self: center;
+    grid-row-gap: 40px;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+#skills_section .symbols i {
+    border: white 1px solid;
+    padding: 10px;
+    height: 50px;
+    font-size: 50px;
+}
+
+/* ---- PORTFOLIO ---- */
+#portfolio .parallax_layer_background {
+    background-image: url("blackgreenblue_flipped.png");
+    background-attachment: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+}
+#portfolio .parallax_layer_content {
+    margin-top: 50px;
+    color: white;
+    border: white 1px solid;
+    font-size: 16px;
 }
