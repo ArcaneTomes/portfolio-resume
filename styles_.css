@@ -68,6 +68,11 @@ header {
     bottom: 0;
     left: 0;
 }
+.parallax_layer_deep {
+    transform: translateZ(-2px) scale(3);
+    -webkit-transform: translateZ(-2px) scale(3);
+    z-index: 0;
+}
 .parallax_layer_background {
     transform: translateZ(-1px) scale(2);
     -webkit-transform: translateZ(-1px) scale(2);
@@ -100,13 +105,12 @@ header {
     padding-top: 20px;
     margin: 50px;
 }
-#profile_section .parallax_layer_background{
+#profile_section .parallax_layer_deep{
     background-image: url("blackgreenblue.png");
     background-attachment: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 91%;
     opacity: .8;
     z-index: 0;
 }
@@ -141,12 +145,10 @@ img[src="profile_.png"] {
     padding-top: 20px;
     margin: 50px;
 }
-#skills_section .parallax_layer_background {
-    background-image: url("black.png");
-    background-attachment: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 550px;
-    height: 100%;
-    z-index: 1;
+#skills_section .parallax_layer_content {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 6(1fr);
+    grid-template-rows: 6(1fr);
 }
