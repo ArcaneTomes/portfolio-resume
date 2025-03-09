@@ -97,22 +97,21 @@ header {
 /* ---- PROFILE ---- */
 #profile_section .parallax_layer_deep {
     background-image: url("blackgreenblue.png");
-    background-attachment: absolute;
+    background-attachment: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 #profile_section .parallax_layer_background {
-    height: 100vh; 
+    height: 100%; 
+    place-items: center;
+    place-content: center;
 }
 #profile_section .container {
     display: grid;
     position: relative;
     grid-template: 1fr 2fr;
     gap: 10px;
-    place-items: center;
-    place-content: center;
 }
 img[src="profile_.png"] {
     display: grid;
