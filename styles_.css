@@ -48,7 +48,6 @@ header {
 
 /* ---- PARALLAX ---- */
 .parallax {
-    perspective: 1px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -85,8 +84,8 @@ header {
     z-index: 2;
 }
 .parallax_layer_foreground {
-    transform: translateZ(1px) scale(.7);
-    -webkit-tranform: translateZ(1px) scale(.7);
+    transform: translateZ(.9px) scale(.7);
+    -webkit-tranform: translateZ(.9px) scale(.7);
     z-index: 3;
 }
 .parallax_layer_top {
@@ -96,22 +95,24 @@ header {
 }
 
 /* ---- PROFILE ---- */
-#profile_section .container {
-    display: grid;
-    grid-template: 1fr 2fr;
-    padding-top: 20px;
-    margin: 50px;
-    height: 450px;
-    gap: 10px;
-    place-items: center;
-    place-content: center;
-}
 #profile_section .parallax_layer_deep {
     background-image: url("blackgreenblue.png");
-    background-attachment: relative;
+    background-attachment: absolute;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100vh;
+}
+#profile_section .parallax_layer_background {
+    height: 100vh; 
+}
+#profile_section .container {
+    display: grid;
+    position: relative;
+    grid-template: 1fr 2fr;
+    gap: 10px;
+    place-items: center;
+    place-content: center;
 }
 img[src="profile_.png"] {
     display: grid;
@@ -146,7 +147,6 @@ img[src="profile_.png"] {
     opacity: .8;
     bottom: 15%;
 }
-
 /* ---- SKILLS ---- */
 #skills_section .parallax_layer_content {
     background-color: black;
