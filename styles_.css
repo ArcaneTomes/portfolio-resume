@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 body, html, main {
     font-family: 'Source Code Pro', sans-serif;
@@ -48,6 +47,7 @@ header {
 
 /* ---- PARALLAX ---- */
 .parallax {
+    perspective: 1px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -84,8 +84,8 @@ header {
     z-index: 2;
 }
 .parallax_layer_foreground {
-    transform: translateZ(.9px) scale(.7);
-    -webkit-tranform: translateZ(.9px) scale(.7);
+    transform: translateZ(1px) scale(.7);
+    -webkit-tranform: translateZ(1px) scale(.7);
     z-index: 3;
 }
 .parallax_layer_top {
@@ -95,23 +95,22 @@ header {
 }
 
 /* ---- PROFILE ---- */
+#profile_section .container {
+    display: grid;
+    grid-template: 1fr 2fr;
+    padding-top: 20px;
+    margin: 50px;
+    height: 450px;
+    gap: 10px;
+    place-items: center;
+    place-content: center;
+}
 #profile_section .parallax_layer_deep {
     background-image: url("blackgreenblue.png");
     background-attachment: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-#profile_section .parallax_layer_background {
-    height: 100%; 
-    place-items: center;
-    place-content: center;
-}
-#profile_section .container {
-    display: grid;
-    position: relative;
-    grid-template: 1fr 2fr;
-    gap: 10px;
 }
 img[src="profile_.png"] {
     display: grid;
@@ -136,16 +135,7 @@ img[src="profile_.png"] {
     font-size: 20px;
     margin-bottom: 5px;
 }
-#profile_section .btn a {
-    background: transparent;
-    position: absolute;
-    color: white;
-    border: none;
-    text-decoration: none;
-    font-size: 55px;
-    opacity: .8;
-    bottom: 15%;
-}
+
 /* ---- SKILLS ---- */
 #skills_section .parallax_layer_content {
     background-color: black;
@@ -206,22 +196,3 @@ img[src="profile_.png"] {
     border: white 1px solid;
     font-size: 16px;
 }
-#portfolio .container {
-
-}
-#portfolio .title
-
-#portfolio .column
-
-#portfolio .parallax_layer_foreground
-#portfolio #project1
-#portfolio #project1 img
-#portfolio #project1 .description
-
-#portfolio #project2
-#portfolio #project2 img
-#portfolio #project2 .description
-
-#portfolio #project3
-#portfolio #project3 img
-#portfolio #project3 .description
