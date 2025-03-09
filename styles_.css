@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body, html, main {
     font-family: 'Source Code Pro', sans-serif;
@@ -47,7 +48,6 @@ header {
 
 /* ---- PARALLAX ---- */
 .parallax {
-    perspective: 1px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -95,16 +95,6 @@ header {
 }
 
 /* ---- PROFILE ---- */
-#profile_section .container {
-    display: grid;
-    grid-template: 1fr 2fr;
-    padding-top: 20px;
-    margin: 50px;
-    height: 450px;
-    gap: 10px;
-    place-items: center;
-    place-content: center;
-}
 #profile_section .parallax_layer_deep {
     background-image: url("blackgreenblue.png");
     background-attachment: relative;
@@ -112,13 +102,25 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+#profile_section .container {
+    display: grid;
+    position: relative;
+    grid-template: 1fr 2fr;
+    height: 100%;
+    border: white 1px solid;
+    place-items: center;
+    place-content: center;
+    top: -8%;
+}
 img[src="profile_.png"] {
     display: grid;
+    position: relative;
     height: 370px;
     grid-column: 1;
 }
 #profile_section .title {
     display: grid;
+    position: relative;
     grid-column: 2;
     border-radius: 10px;
     padding: 10px;
@@ -143,7 +145,7 @@ img[src="profile_.png"] {
     text-decoration: none;
     font-size: 55px;
     opacity: .8;
-    bottom: 15%;
+    bottom: 12%;
 }
 
 
@@ -178,8 +180,9 @@ img[src="profile_.png"] {
     display: grid;
     padding: 30px;
     margin-top: 10px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 350px;
+    margin-right: 350px;
+    border: white 1px solid;
     place-self: center;
     grid-row-gap: 40px;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
@@ -194,7 +197,7 @@ img[src="profile_.png"] {
 /* ---- PORTFOLIO ---- */
 #portfolio .parallax_layer_background {
     background-image: url("blackgreenblue_flipped.png");
-    background-attachment: absolute;
+    background-attachment: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
