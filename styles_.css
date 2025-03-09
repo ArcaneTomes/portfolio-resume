@@ -135,6 +135,17 @@ img[src="profile_.png"] {
     font-size: 20px;
     margin-bottom: 5px;
 }
+#profile_section .btn a {
+    background: transparent;
+    position: absolute;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 55px;
+    opacity: .8;
+    bottom: 15%;
+}
+
 
 /* ---- SKILLS ---- */
 #skills_section .parallax_layer_content {
