@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body, html, main {
     font-family: 'Source Code Pro', sans-serif;
@@ -135,6 +136,16 @@ img[src="profile_.png"] {
     font-size: 20px;
     margin-bottom: 5px;
 }
+#profile_section .btn a {
+    background: transparent;
+    position: absolute;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 55px;
+    opacity: .8;
+    bottom: 15%;
+}
 
 /* ---- SKILLS ---- */
 #skills_section .parallax_layer_content {
@@ -196,3 +207,22 @@ img[src="profile_.png"] {
     border: white 1px solid;
     font-size: 16px;
 }
+#portfolio .container {
+
+}
+#portfolio .title
+
+#portfolio .column
+
+#portfolio .parallax_layer_foreground
+#portfolio #project1
+#portfolio #project1 img
+#portfolio #project1 .description
+
+#portfolio #project2
+#portfolio #project2 img
+#portfolio #project2 .description
+
+#portfolio #project3
+#portfolio #project3 img
+#portfolio #project3 .description
