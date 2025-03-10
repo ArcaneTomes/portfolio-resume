@@ -157,13 +157,12 @@ img[src="profile_.png"] {
 }
 #profile_section .btn a {
     background: transparent;
-    position: absolute;
+    position: relative;
     color: white;
     border: none;
     text-decoration: none;
     font-size: 5vw;
     opacity: .8;
-    bottom: 12%;
 }
 
 
@@ -173,7 +172,6 @@ img[src="profile_.png"] {
     background-attachment: relative;
     background-size: cover;
     background-position: center;
-    background-repeat: repeat-y;
     color: white;
     padding-bottom: 85vw;
 }
@@ -181,7 +179,7 @@ img[src="profile_.png"] {
     background-color: black;
     display: grid;
     position: relative;
-    margin: 6vw;
+    margin: 4vw;
 }
 #skills_section .description {
     place-self: center;
@@ -213,7 +211,7 @@ img[src="profile_.png"] {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: -26vw;
+    margin: -18vw;
 }
 #portfolio .parallax_layer_content {
     position: relative;
