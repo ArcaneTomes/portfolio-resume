@@ -238,3 +238,6 @@ img[src="profile_.png"] {
     position: relative;
     border: .3vw pink solid;
 }
+#project1 {
+    border: 1vw teal solid;
+}
