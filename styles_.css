@@ -1,19 +1,32 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 body, html, main {
     font-family: 'Source Code Pro', sans-serif;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: center;
-    height: 100%;
+    height: 100vh;
     background-color: black;
     color: white;
     scroll-behavior: smooth;
     transform: translateZ(0);
 }
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    h1 { font-size: 12vw; }
+    h2 { font-size: 8vw; }
+    h3 { font-size: 6vw; }
+    h4 { font-size: 5vw; }
+    p { font-size: 3vw; }
+    .navbar a { font-size: 3vw; }
+}
+
+
 
 /* ---- HEADER ---- */
 header {
@@ -35,41 +48,30 @@ header {
     margin: 1%;
     font-size: 2vw;
 }
-.navbar a:hover {
-    background: white;
-    color: black;
-    border-radius: 5%;
-}
-.navbar a:active {
+.navbar a:hover, .navbar a:active {
     background: white;
     color: black;
     border-radius: 5%;
 }
 
 /* ---- MAIN ---- */
-h1 {
-    font-size: 10vw;
-}
-h2 {
-    font-size: 6vw;
-}
-h3 {
-    font-size: 4vw;
-}
-h4 {
-    font-size: 3vw;
-}
-p {
-    font-size: 2vw;
+h1 { font-size: 10vw; text-transform: uppercase;}
+h2 { font-size: 6vw;}
+h3 { font-size: 4vw; }
+h4 { font-size: 3vw; }
+p { font-size: 2vw; }
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ---- PARALLAX ---- */
 .parallax {
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     perspective: 1px;
     -webkit-perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .parallax_group {
     position: relative;
@@ -100,14 +102,14 @@ p {
     -webkit-transform: translateZ(0);
     z-index: 2;
 }
-.parallax_layer_foreground {
+.parallax_layer_front {
     transform: translateZ(1px) scale(.7);
-    -webkit-tranform: translateZ(1px) scale(.7);
+    -webkit-transform: translateZ(1px) scale(.7);
     z-index: 3;
 }
 .parallax_layer_top {
-    transform: translateZ(2px) scale(1.5);
-    -webkit-tranform: translateZ(2px) scale(1.5);
+    transform: translateZ(2px) scale(-1);
+    -webkit-transform: translateZ(2px) scale(-1);
     z-index: 4;
 }
 
@@ -123,9 +125,8 @@ p {
     display: grid;
     position: relative;
     grid-template: 1fr 2fr;
-    height: 100%;
+    height: 100vh;
     place-items: center;
-    place-content: center;
     top: -6%;
     padding: 1vw;
 }
@@ -137,31 +138,30 @@ img[src="profile_.png"] {
     grid-column: 1;
 }
 #profile_section .title {
-    display: grid;
-    position: relative;
     grid-column: 2;
     padding: 1vw;
-
 }
 #profile_section .title h1 {
     font-size: 10vw;
-    place-self: center;
     margin-bottom: 2vw;
-    text-transform: uppercase;
 }
 #profile_section p {
-    display: grid;
-    grid-column: 2;
     font-size: 2.1vw;
     margin-bottom: 1vw
 }
+#profile_section .btn {
+    position: absolute;
+    bottom: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
 #profile_section .btn a {
     background: transparent;
-    position: relative;
     color: white;
     border: none;
     text-decoration: none;
-    font-size: 5vw;
+    font-size: 8vw;
     opacity: .8;
 }
 
@@ -169,7 +169,6 @@ img[src="profile_.png"] {
 /* ---- SKILLS ---- */
 #skills_section .parallax_layer_content {
     background-color: black;
-    background-attachment: relative;
     background-size: cover;
     background-position: center;
     color: white;
@@ -192,47 +191,50 @@ img[src="profile_.png"] {
     display: grid;
     place-self: center;
     grid-row-gap: 6vw;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     margin: 5vw 24vw;
 }
 #skills_section .symbols i {
-    border: white .3vw solid;
+    border: .3vw white solid;
     border-radius: 10%;
     font-size: 7vw;
     padding: 1.3vw;
     place-self: center;
-
 }
 
 /* ---- PORTFOLIO ---- */
 #portfolio .parallax_layer_background {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-image: url("blackgreenblue_flipped.png");
-    background-attachment: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: -18vw;
 }
 #portfolio .parallax_layer_content {
+    display: grid;
     position: relative;
-    border: purple 1px solid;
+    border: .3vw purple solid;
     margin: 2vw;
     margin-top: 26vw;
 }
 #portfolio .container {
     display: grid;
     position: relative;
-    border: green 3px solid;
+    border: .3vw green solid;
 }
 #portfolio .title {
     display: grid;
     position: relative;
     font-size: 10vw;
     text-transform: uppercase;
-    border: orange 1px solid;
+    border: .3vw orange solid;
 }
 #portfolio .parallax_layer_front {
     display: grid;
     position: relative;
-    border: pink 1px solid;
+    border: .3vw pink solid;
 }
